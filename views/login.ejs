@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Weaver</title>
+		<link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/style_login.css">
+	</head>
+	<body>
+		<div id="app">
+			<div data-reactroot>
+				<div class="special-page">
+					<a href="/" class="logo-link"><strong>W</strong><br>Weaver</a>
+					<div class="tabs">
+						<a href="/login" class="active">Sign In</a>
+						<a href="/createAccount">Create Account</a>
+					</div>
+					<form action="/login" method="post">
+						<div class="autofil-wrapper">
+							<div class="form-username-field">
+								<label>Username</label>
+								<input type="text" placeholder="Username" name="username">
+							</div>
+							<div class="form-password-field">
+								<label>Password</label>
+								<input type="password" placeholder="Password" name="password">
+								<a class="reset-password" href="#">Forgot?</a>
+							</div>
+							<button>Sign In</button>
+						</div>
+					</form>
+					<p class="login-fail">Username or password incorrect.</p>
+					<a href="#" class="contact">Contact Us</a>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>   
+		<script type="text/javascript" src="javascripts/login.js"></script>
+	</body>
+</html>

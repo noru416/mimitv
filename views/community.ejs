@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weaver</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/community.css">
+</head>
+<body>
+	<div class="contianer">
+		<div class="row">
+			<a href="/">home</a>
+			<!-- 데이터베이스안에 전체 데이터인 rows를 10개까지만 뿌려줌
+			10개 이상일 경우 다음페이지인 community?page=2에다가 10개를 또 뿌려줌 -->
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>추천</th>
+						<th>조회</th>
+						<th>글쓴이</th>
+					</tr>
+				</thead>
+				<tbody class="main-table">
+					<% rows = rows.reverse()%>
+					<%
+					     for(var i = (page - 1) *10; i<= 10 * page; i++)
+					     {
+								 oneItem = rows[i];
+								 if (oneItem == null) break;
+					%>
+					    <tr>
+					    	<td class="index"><%= i+1%></td>
+					    	<td><a href="community/#/<%=oneItem.title%>"><%=oneItem.title%></a></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					        <td><%=oneItem.username%></td>
+					    </tr>
+
+					<%
+					     }
+					%>
+				</tbody>
+			</table>
+		</div>
+		<a class="btn btn-default" href="/write" role="button">Write</a>
+		<nav>
+		  <ul class="pagination">
+
+		    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		    <li class="active"><a href="/community/list/1">1</a></li>
+				<% var max = Math.ceil(rows.length/10+2) %>
+				<% for (var i = 2; i < Math.floor((rows.length)/10)+1; i++) { %>
+
+				    <li><a href='/community/list/<%= i %>'><%= i %></a></h3>
+
+				<% } %>
+				<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+		    </li>
+		  </ul>
+		</nav>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/javascripts/board.js"></script>
+</body>
+</html>

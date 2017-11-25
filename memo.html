@@ -1,0 +1,14 @@
+1.데이터 다 긁어옴 SELECT * FROM board
+2. 게시글 갯수 N % 10 
+3. 한 페이지당 10개씩 tr 만들어서 뿌려줌
+for(var i=0; i<10; i++)
+ {
+	 oneItem = rows[i];
+<tr>
+	<td class="index"><%=i+min+1%></td>
+	<td><a href="community/#/<%=oneItem.title%>"><%=oneItem.title%></a></td>
+	<td>0</td>
+	<td>0</td>
+    <td><%=oneItem.username%></td>
+</tr>
+3.

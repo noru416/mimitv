@@ -1,0 +1,127 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0; 
+}
+html {
+	position: relative;
+	background: white; 
+}
+body {
+	color: #192530;
+	font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,Helvetica,sans-serif;
+	font-size: 9pt;
+	line-height: 20px;
+}
+a {
+	text-decoration: none;
+}
+button {
+	border-radius: 2px;
+	padding: 0 18px 0 14px;
+	height: 34px;
+	line-height: 100%;
+	color: #192530;
+	background-image: linear-gradient(0deg,#fcfcfc 0,#fff 100%);
+	border: 1px solid #dcdcdc;
+	font-size: 11px;
+	cursor: pointer;
+	font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,Helvetica,sans-serif;
+	font-weight: 300;
+}
+input, textarea {
+	font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,Helvetica,sans-serif;
+	border-radius: 3px;
+	border:1px solid #bebebe;
+	box-shadow: inset 0 1px 2px #e6e6e6;
+}
+#id {
+	height: 100%;
+}
+#app, #app div[data-reactroot] {
+	height: 100%;
+}
+.special-page {
+	color: #797979;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.logo-link {
+	display: inline-block;
+	font: normal normal normal 9pt/1 VelaFont;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-size: 40px;
+	color: #474747;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	line-height: 60px;
+	font-family: 'Orbitron', sans-serif;
+}
+.logo-link strong {
+	font-family: 'Ewert', cursive;
+	font-size: 50px; 
+}
+.special-page .tabs a.active {
+	color: #797979;
+}
+.special-page .tabs a {
+	margin: 0 15px;
+	color: #c4c4c4;
+	padding-bottom: 4px;
+}
+.special-page form {
+	margin-top: 30px;
+	text-align: center;
+}
+.special-page .form-password-field, .special-page .form-username-field {
+	position: relative;
+}
+.special-page form label {
+	display: none;
+}
+.special-page form input {
+	width: 230px;
+	margin-bottom: 15px;
+}
+input[type=password], input[type=text] {
+	line-height: 30px;
+	height: 34px;
+	margin: 0;
+	padding: 0 7px;
+	color: #d6d6d6;
+	font-size: 11px;
+	word-break: initial;
+	font-weight: 300; 
+}
+input[type=password]:focus, input[type=text]:focus {
+	border-color: #a0a0a0;
+	color: #7d7d7d;
+	outline: none;
+}
+.special-page .reset-password {
+	position: absolute;
+	right: 10px;
+	top: 6px;
+	font-size: 11px;
+	color: #999;
+}
+.special-page form button {
+	margin-top: 45px;
+}
+button.inactive, button:disabled {
+	opacity: .3;
+	cursor: default;
+}
+.special-page .contact {
+	color: #797979;
+	display: block;
+}
+.login-fail {
+	color: red;
+	visibility: hidden;
+}
